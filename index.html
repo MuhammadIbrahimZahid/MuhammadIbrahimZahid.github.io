@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ibrahim Zahid| Performance Media Buyer</title>
+
+    <meta name="description" content="Performance Media Buyer specializing in lead generation, paid acquisition, qualified calls, CPA optimization and campaign scaling.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #080b10;
+            --card: #10151d;
+            --card-hover: #151c26;
+            --text: #f4f7fb;
+            --muted: #929cab;
+            --green: #38e39b;
+            --blue: #4d8dff;
+            --border: rgba(255,255,255,0.08);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 120px 0 90px;
+            text-align: center;
+            position: relative;
+        }
+
+        .eyebrow {
+            color: var(--green);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 88px);
+            line-height: 0.98;
+            letter-spacing: -4px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .hero h1 span {
+            color: var(--green);
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 28px auto 35px;
+            color: var(--muted);
+            font-size: 19px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.2s ease;
+        }
+
+        .btn-primary {
+            background: var(--green);
+            color: #06120d;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(56,227,155,0.2);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--border);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: var(--card);
+        }
+
+        /* STATS */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 120px;
+        }
+
+        .stat {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 28px 20px;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .stat-label {
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-label {
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 5vw, 52px);
+            letter-spacing: -2px;
+            line-height: 1.05;
+            margin-bottom: 18px;
+        }
+
+        .section-description {
+            color: var(--muted);
+            max-width: 650px;
+            margin-bottom: 45px;
+        }
+
+        /* CASE STUDY */
+
+        .case-study {
+            background: linear-gradient(135deg, #111923, #0d1219);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            padding: 45px;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .case-study h3 {
+            font-size: 34px;
+            letter-spacing: -1px;
+            margin-bottom: 14px;
+        }
+
+        .case-study p {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        .case-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.03);
+            color: #cbd2dc;
+            padding: 7px 11px;
+            border-radius: 50px;
+            font-size: 12px;
+        }
+
+        .case-number {
+            font-size: 72px;
+            font-weight: 900;
+            color: var(--green);
+            letter-spacing: -4px;
+        }
+
+        .case-number-label {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* SERVICES */
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .service {
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: var(--card);
+        }
+
+        .service h3 {
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .service p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about p {
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        .about-list {
+            list-style: none;
+        }
+
+        .about-list li {
+            padding: 13px 0;
+            border-bottom: 1px solid var(--border);
+            color: #dce2e9;
+        }
+
+        .about-list li::before {
+            content: "✓";
+            color: var(--green);
+            margin-right: 12px;
+            font-weight: bold;
+        }
+
+        /* CTA */
+
+        .cta {
+            text-align: center;
+            padding: 100px 30px;
+            background: linear-gradient(
+                135deg,
+                rgba(56,227,155,0.08),
+                rgba(77,141,255,0.06)
+            );
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            margin-bottom: 80px;
+        }
+
+        .cta h2 {
+            font-size: clamp(36px, 5vw, 58px);
+            letter-spacing: -2px;
+            margin-bottom: 18px;
+        }
+
+        .cta p {
+            color: var(--muted);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 30px 0;
+            color: var(--muted);
+            font-size: 13px;
+            text-align: center;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .case-study,
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .case-number {
+                font-size: 56px;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 80px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .case-study {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <div class="container">
+        <nav>
+            <div class="logo">IBRAHIM ZAHID</div>
+
+            <div class="nav-links">
+                <a href="#case-study">Case Study</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- HERO -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container">
+
+                <div class="eyebrow">
+                    Performance Media Buyer
+                </div>
+
+                <h1>
+                    I scale paid acquisition around
+                    <span>real business outcomes.</span>
+                </h1>
+
+                <p>
+                    Media buying focused on qualified lead generation,
+                    CPA optimization, call quality, revenue and profitable scaling.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        class="btn btn-primary"
+                        href="#case-study">
+                        View Case Study
+                    </a>
+
+                    <a
+                        class="btn btn-secondary"
+                        href="case-studies/ACA Lead Generation Media Buying Case Study — 2025.ppt"
+                        target="_blank">
+                        Download Case Study
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- STATS -->
+
+        <div class="container">
+
+            <div class="stats">
+
+                <div class="stat">
+                    <div class="stat-number">$4.41M</div>
+                    <div class="stat-label">
+                        Ringba-reported revenue
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-number">$3.3M</div>
+                    <div class="stat-label">
+                        Paid media spend
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-number">470K+</div>
+                    <div class="stat-label">
+                        Incoming calls
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-number">~35%</div>
+                    <div class="stat-label">
+                        Reported ROI
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CASE STUDY -->
+
+        <section id="case-study">
+
+            <div class="container">
+
+                <div class="section-label">
+                    Featured Case Study
+                </div>
+
+                <h2 class="section-title">
+                    Scaling U.S. ACA Lead Generation
+                </h2>
+
+                <p class="section-description">
+                    A 2025 paid acquisition case study focused on generating
+                    qualified calls and scaling profitable campaign economics
+                    across Google Ads and Meta.
+                </p>
+
+
+                <div class="case-study">
+
+                    <div>
+
+                        <h3>
+                            From ~$220 CPA to <span style="color:#38e39b;">
+                            &lt; $90
+                            </span>
+                        </h3>
+
+                        <p>
+                            Managed media buying across 20 accounts, using
+                            structured creative testing, audience testing,
+                            landing-page optimization and controlled scaling.
+                        </p>
+
+                        <div class="case-tags">
+
+                            <span class="tag">Google Ads</span>
+                            <span class="tag">Meta</span>
+                            <span class="tag">ACA</span>
+                            <span class="tag">Lead Generation</span>
+                            <span class="tag">Qualified Calls</span>
+                            <span class="tag">U.S. Market</span>
+
+                        </div>
+
+                        <a
+                            class="btn btn-primary"
+                            href="case-studies/ACA Lead Generation Media Buying Case Study — 2025.ppt"
+                            target="_blank">
+                            Read Full Case Study →
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="case-number">
+                            $4.41M
+                        </div>
+
+                        <div class="case-number-label">
+                            Ringba-reported revenue
+                        </div>
+
+                        <br>
+
+                        <div class="case-number" style="font-size:52px;">
+                            470K+
+                        </div>
+
+                        <div class="case-number-label">
+                            Incoming calls
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICES -->
+
+        <section id="services">
+
+            <div class="container">
+
+                <div class="section-label">
+                    Capabilities
+                </div>
+
+                <h2 class="section-title">
+                    Performance marketing built around economics.
+                </h2>
+
+                <p class="section-description">
+                    I focus on the metrics that determine whether paid
+                    acquisition is actually working.
+                </p>
+
+
+                <div class="services">
+
+                    <div class="service">
+                        <h3>Google Ads</h3>
+                        <p>
+                            Campaign management, testing, optimization
+                            and profitable scaling.
+                        </p>
+                    </div>
+
+                    <div class="service">
+                        <h3>Meta Ads</h3>
+                        <p>
+                            Creative testing, audience testing and
+                            performance optimization.
+                        </p>
+                    </div>
+
+                    <div class="service">
+                        <h3>Lead Generation</h3>
+                        <p>
+                            Acquisition systems designed around
+                            qualified leads and calls.
+                        </p>
+                    </div>
+
+                    <div class="service">
+                        <h3>CPA Optimization</h3>
+                        <p>
+                            Structured decision-making to reduce
+                            acquisition costs.
+                        </p>
+                    </div>
+
+                    <div class="service">
+                        <h3>Campaign Scaling</h3>
+                        <p>
+                            Controlled budget expansion once campaigns
+                            demonstrate profitable economics.
+                        </p>
+                    </div>
+
+                    <div class="service">
+                        <h3>Funnel Optimization</h3>
+                        <p>
+                            Landing-page and conversion-path testing
+                            focused on reducing unnecessary friction.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section id="about">
+
+            <div class="container">
+
+                <div class="about">
+
+                    <div>
+
+                        <div class="section-label">
+                            About
+                        </div>
+
+                        <h2 class="section-title">
+                            Media buying with a focus on measurable outcomes.
+                        </h2>
+
+                        <p>
+                            I'm a performance media buyer specializing in
+                            lead generation and qualified-call acquisition.
+                        </p>
+
+                        <p>
+                            My approach combines structured testing,
+                            disciplined optimization and controlled scaling
+                            to find profitable acquisition opportunities.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <ul class="about-list">
+
+                            <li>Google Ads + Meta</li>
+
+                            <li>Qualified-call acquisition</li>
+
+                            <li>CPA and ROI optimization</li>
+
+                            <li>Creative testing</li>
+
+                            <li>Audience testing</li>
+
+                            <li>Landing-page optimization</li>
+
+                            <li>Multi-account campaign management</li>
+
+                            <li>Performance scaling</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="cta">
+
+                    <div class="section-label">
+                        Let's Work Together
+                    </div>
+
+                    <h2>
+                        Ready to scale qualified lead acquisition?
+                    </h2>
+
+                    <p>
+                        If you need a media buyer who can manage paid
+                        acquisition around CPA, call quality, conversion
+                        and revenue, let's discuss your campaign.
+                    </p>
+
+                    <!--
+                        REPLACE THIS LINK with your Upwork profile URL
+                        or professional contact page.
+                    -->
+
+                    <a
+                        class="btn btn-primary"
+                        href="https://www.linkedin.com/in/muhammad-ibrahim-bin-zahid-115590231/"
+                        target="_blank">
+                        Request Campaign Management
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 IBRAHIM ZAHID · Performance Media Buyer
+
+    </footer>
+
+</body>
+</html>
