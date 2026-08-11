@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,57 +16,79 @@
     <meta name="author" content="Ibrahim Zahid">
 
     <!-- Open Graph -->
+
     <meta property="og:title" content="Ibrahim Zahid | Performance Media Buyer">
+
     <meta
         property="og:description"
         content="Performance media buyer specializing in paid acquisition, lead generation, qualified calls, CPA optimization and profitable campaign scaling."
     >
+
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://muhammadibrahimzahid.github.io/">
+
+    <meta
+        property="og:url"
+        content="https://muhammadibrahimzahid.github.io/"
+    >
+
     <meta
         property="og:image"
         content="https://muhammadibrahimzahid.github.io/og-image.jpg"
     >
 
     <!-- Twitter -->
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ibrahim Zahid | Performance Media Buyer">
+
+    <meta
+        name="twitter:title"
+        content="Ibrahim Zahid | Performance Media Buyer"
+    >
+
     <meta
         name="twitter:description"
         content="Performance media buyer specializing in paid acquisition, lead generation, qualified calls, CPA optimization and profitable campaign scaling."
     >
+
     <meta
         name="twitter:image"
         content="https://muhammadibrahimzahid.github.io/og-image.jpg"
     >
 
-    <!-- Favicon -->
     <meta name="theme-color" content="#080b10">
 
+
     <style>
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+
         :root {
             --bg: #080b10;
             --bg-soft: #0b1017;
             --card: #10151d;
             --card-hover: #151c26;
+
             --text: #f4f7fb;
             --muted: #929cab;
             --muted-light: #c8d0db;
+
             --green: #38e39b;
             --blue: #4d8dff;
+
             --border: rgba(255, 255, 255, 0.08);
             --border-strong: rgba(255, 255, 255, 0.13);
         }
 
+
         html {
             scroll-behavior: smooth;
         }
+
 
         body {
             font-family:
@@ -73,43 +97,54 @@
                 BlinkMacSystemFont,
                 "Segoe UI",
                 sans-serif;
+
             background: var(--bg);
             color: var(--text);
+
             line-height: 1.6;
+
             -webkit-font-smoothing: antialiased;
         }
+
 
         body::selection {
             background: rgba(56, 227, 155, 0.25);
             color: #fff;
         }
 
+
         a {
             color: inherit;
             text-decoration: none;
         }
+
 
         button,
         a {
             -webkit-tap-highlight-color: transparent;
         }
 
+
         .container {
             width: min(1160px, 90%);
             margin: 0 auto;
         }
 
+
         /* =========================
            NAVIGATION
-        ========================= */
+        ========================== */
 
         nav {
             height: 80px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             border-bottom: 1px solid var(--border);
         }
+
 
         .logo {
             font-size: 18px;
@@ -117,96 +152,142 @@
             letter-spacing: -0.4px;
         }
 
+
         .nav-links {
             display: flex;
             align-items: center;
+
             gap: 30px;
+
             color: var(--muted);
+
             font-size: 14px;
         }
+
 
         .nav-links a {
             transition: color 0.2s ease;
         }
 
+
         .nav-links a:hover {
             color: #fff;
         }
 
+
         /* =========================
            HERO
-        ========================= */
+        ========================== */
 
         .hero {
             padding: 125px 0 105px;
+
             text-align: center;
+
             position: relative;
             overflow: hidden;
         }
 
+
         .hero::before {
             content: "";
+
             position: absolute;
+
             width: 600px;
             height: 400px;
+
             background: rgba(56, 227, 155, 0.055);
+
             filter: blur(90px);
+
             border-radius: 50%;
+
             top: 20px;
             left: 50%;
+
             transform: translateX(-50%);
+
             pointer-events: none;
         }
+
 
         .hero > .container {
             position: relative;
             z-index: 1;
         }
 
+
         .eyebrow {
             color: var(--green);
+
             font-size: 12px;
             font-weight: 750;
+
             letter-spacing: 2.5px;
+
             text-transform: uppercase;
+
             margin-bottom: 24px;
         }
 
+
         .hero h1 {
             font-size: clamp(48px, 7vw, 86px);
+
             line-height: 0.98;
+
             letter-spacing: -4.5px;
+
             max-width: 980px;
+
             margin: 0 auto;
         }
+
 
         .hero h1 span {
             color: var(--green);
         }
 
+
         .hero p {
             max-width: 690px;
+
             margin: 30px auto 36px;
+
             color: var(--muted);
+
             font-size: 18px;
         }
 
+
         .buttons {
             display: flex;
+
             justify-content: center;
+
             gap: 12px;
+
             flex-wrap: wrap;
         }
 
+
         .btn {
             display: inline-flex;
+
             align-items: center;
             justify-content: center;
+
             padding: 13px 21px;
+
             min-height: 48px;
+
             border-radius: 9px;
+
             font-weight: 750;
+
             font-size: 14px;
+
             transition:
                 transform 0.2s ease,
                 background 0.2s ease,
@@ -214,309 +295,404 @@
                 box-shadow 0.2s ease;
         }
 
+
         .btn-primary {
             background: var(--green);
+
             color: #06120d;
         }
 
+
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 35px rgba(56, 227, 155, 0.18);
+
+            box-shadow:
+                0 12px 35px rgba(56, 227, 155, 0.18);
         }
+
 
         .btn-secondary {
             border: 1px solid var(--border-strong);
+
             color: #fff;
+
             background: rgba(255, 255, 255, 0.015);
         }
 
+
         .btn-secondary:hover {
             background: var(--card);
+
             border-color: rgba(255, 255, 255, 0.2);
         }
 
+
         /* =========================
            SECTION SYSTEM
-        ========================= */
+        ========================== */
 
         section {
             padding: 100px 0;
         }
 
+
         .section-label {
             color: var(--green);
+
             text-transform: uppercase;
+
             letter-spacing: 2.2px;
+
             font-size: 11px;
+
             font-weight: 800;
+
             margin-bottom: 14px;
         }
 
+
         .section-title {
             font-size: clamp(34px, 5vw, 56px);
+
             letter-spacing: -2.8px;
+
             line-height: 1.03;
+
             margin-bottom: 18px;
         }
 
+
         .section-description {
             color: var(--muted);
+
             max-width: 700px;
+
             margin-bottom: 45px;
         }
 
+
         /* =========================
            PROOF BAR
-        ========================= */
+        ========================== */
 
         .proof-wrap {
             padding-bottom: 20px;
         }
 
+
         .proof-grid {
             display: grid;
+
             grid-template-columns: repeat(4, 1fr);
+
             gap: 12px;
         }
 
+
         .proof-card {
             background: var(--card);
+
             border: 1px solid var(--border);
+
             border-radius: 14px;
+
             padding: 26px 20px;
         }
 
+
         .proof-number {
             font-size: 30px;
+
             font-weight: 850;
+
             letter-spacing: -1.2px;
+
             line-height: 1.1;
         }
 
+
         .proof-label {
             color: var(--muted);
+
             font-size: 12px;
+
             margin-top: 7px;
         }
 
+
         .proof-note {
             margin-top: 16px;
+
             color: #737d8b;
+
             font-size: 11px;
+
             text-align: center;
         }
 
+
         /* =========================
            CASE STUDIES
-        ========================= */
+        ========================== */
 
         #case-studies {
             padding-top: 120px;
         }
 
+
         .case-grid {
             display: grid;
+
             grid-template-columns: repeat(2, 1fr);
+
             gap: 18px;
         }
 
+
         .case-card {
             position: relative;
+
             overflow: hidden;
+
             display: flex;
+
             flex-direction: column;
+
             min-height: 540px;
+
             padding: 36px;
+
             border-radius: 20px;
+
             border: 1px solid var(--border);
+
             background:
                 linear-gradient(
                     145deg,
                     rgba(17, 25, 35, 0.98),
                     rgba(12, 17, 24, 0.98)
                 );
+
             transition:
                 transform 0.25s ease,
                 border-color 0.25s ease,
                 background 0.25s ease;
         }
 
+
         .case-card:hover {
             transform: translateY(-4px);
+
             border-color: var(--border-strong);
+
             background: var(--card-hover);
         }
 
+
         .case-card::after {
             content: "";
+
             position: absolute;
+
             width: 230px;
             height: 230px;
+
             border-radius: 50%;
+
             filter: blur(80px);
+
             opacity: 0.08;
+
             right: -80px;
             top: -80px;
+
             pointer-events: none;
         }
+
 
         .case-card.aca::after {
             background: var(--blue);
         }
 
+
         .case-card.debt::after {
             background: var(--green);
         }
 
+
         .case-top {
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
+
             gap: 15px;
+
             margin-bottom: 30px;
         }
+
 
         .case-index {
             color: #6e7784;
+
             font-size: 12px;
+
             font-weight: 750;
+
             letter-spacing: 1.5px;
         }
 
+
         .case-status {
             border: 1px solid var(--border);
+
             color: #aeb7c4;
+
             background: rgba(255, 255, 255, 0.025);
+
             padding: 6px 9px;
+
             border-radius: 50px;
+
             font-size: 10px;
+
             font-weight: 750;
+
             text-transform: uppercase;
+
             letter-spacing: 0.7px;
         }
 
+
         .case-card h3 {
             font-size: 32px;
+
             line-height: 1.05;
+
             letter-spacing: -1.5px;
+
             margin-bottom: 14px;
         }
 
+
         .case-card > p {
             color: var(--muted);
+
             font-size: 14px;
+
             line-height: 1.7;
+
             max-width: 520px;
+
             margin-bottom: 25px;
         }
 
+
         .case-tags {
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 7px;
+
             margin-bottom: 30px;
         }
 
+
         .tag {
             border: 1px solid var(--border);
+
             background: rgba(255, 255, 255, 0.025);
+
             color: #cbd2dc;
+
             padding: 6px 9px;
+
             border-radius: 50px;
+
             font-size: 11px;
         }
 
+
         .case-results {
             display: grid;
+
             grid-template-columns: repeat(2, 1fr);
+
             gap: 10px;
+
             margin-top: auto;
+
             margin-bottom: 28px;
         }
 
+
         .result {
             padding: 15px;
+
             border-radius: 11px;
+
             background: rgba(255, 255, 255, 0.025);
+
             border: 1px solid rgba(255, 255, 255, 0.055);
         }
 
+
         .result-number {
             font-size: 24px;
+
             font-weight: 850;
+
             letter-spacing: -1px;
+
             line-height: 1.1;
         }
 
+
         .result-label {
             color: #7f8997;
+
             font-size: 10px;
+
             margin-top: 5px;
         }
+
 
         .case-card .btn {
             width: 100%;
         }
 
-        /* =========================
-           CAPABILITIES
-        ========================= */
-
-        .services {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 13px;
-        }
-
-        .service {
-            padding: 27px;
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            background: var(--card);
-            transition:
-                transform 0.2s ease,
-                border-color 0.2s ease;
-        }
-
-        .service:hover {
-            transform: translateY(-3px);
-            border-color: var(--border-strong);
-        }
-
-        .service-number {
-            color: var(--green);
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 1.5px;
-            margin-bottom: 20px;
-        }
-
-        .service h3 {
-            margin-bottom: 8px;
-            font-size: 17px;
-            letter-spacing: -0.3px;
-        }
-
-        .service p {
-            color: var(--muted);
-            font-size: 13px;
-            line-height: 1.65;
-        }
 
         /* =========================
-           OPERATING MODEL
-        ========================= */
+           PERFORMANCE SYSTEMS
+        ========================== */
 
-        .operating-model {
+        #reports {
+            background: var(--bg-soft);
+        }
+
+
+        .systems-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+
+            grid-template-columns: repeat(2, 1fr);
+
             gap: 18px;
         }
 
-        .model-card {
+
+        .system-card {
+            position: relative;
+
+            overflow: hidden;
+
             padding: 34px;
+
             border: 1px solid var(--border);
-            border-radius: 18px;
+
+            border-radius: 20px;
+
             background:
                 linear-gradient(
                     145deg,
@@ -525,243 +701,602 @@
                 );
         }
 
+
+        .system-card.aca {
+            border-top-color: rgba(77, 141, 255, 0.35);
+        }
+
+
+        .system-card.debt {
+            border-top-color: rgba(56, 227, 155, 0.35);
+        }
+
+
+        .system-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            gap: 20px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .system-header h3 {
+            font-size: 27px;
+
+            line-height: 1.1;
+
+            letter-spacing: -1px;
+        }
+
+
+        .system-year {
+            color: var(--muted);
+
+            font-size: 11px;
+
+            font-weight: 750;
+
+            white-space: nowrap;
+
+            border: 1px solid var(--border);
+
+            border-radius: 50px;
+
+            padding: 6px 9px;
+        }
+
+
+        .system-card > p {
+            color: var(--muted);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+            margin-bottom: 25px;
+        }
+
+
+        .resource-list {
+            display: grid;
+
+            gap: 9px;
+        }
+
+
+        .resource {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            padding: 15px 16px;
+
+            border-radius: 11px;
+
+            background: rgba(255, 255, 255, 0.025);
+
+            border: 1px solid rgba(255, 255, 255, 0.055);
+
+            transition:
+                background 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+
+        .resource:hover {
+            background: rgba(255, 255, 255, 0.05);
+
+            border-color: var(--border-strong);
+
+            transform: translateX(3px);
+        }
+
+
+        .resource-info {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 2px;
+        }
+
+
+        .resource-title {
+            color: #e5eaf0;
+
+            font-size: 13px;
+
+            font-weight: 750;
+        }
+
+
+        .resource-description {
+            color: #727d8b;
+
+            font-size: 10px;
+        }
+
+
+        .resource-arrow {
+            color: var(--green);
+
+            font-size: 17px;
+
+            font-weight: 800;
+
+            flex-shrink: 0;
+        }
+
+
+        /* =========================
+           CAPABILITIES
+        ========================== */
+
+        .services {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 13px;
+        }
+
+
+        .service {
+            padding: 27px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 14px;
+
+            background: var(--card);
+
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+
+        .service:hover {
+            transform: translateY(-3px);
+
+            border-color: var(--border-strong);
+        }
+
+
+        .service-number {
+            color: var(--green);
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .service h3 {
+            margin-bottom: 8px;
+
+            font-size: 17px;
+
+            letter-spacing: -0.3px;
+        }
+
+
+        .service p {
+            color: var(--muted);
+
+            font-size: 13px;
+
+            line-height: 1.65;
+        }
+
+
+        /* =========================
+           OPERATING MODEL
+        ========================== */
+
+        .operating-model {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 18px;
+        }
+
+
+        .model-card {
+            padding: 34px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(16, 21, 29, 1),
+                    rgba(11, 16, 23, 1)
+                );
+        }
+
+
         .model-card h3 {
             font-size: 24px;
+
             letter-spacing: -1px;
+
             margin-bottom: 12px;
         }
 
+
         .model-card p {
             color: var(--muted);
+
             font-size: 14px;
+
             margin-bottom: 24px;
         }
+
 
         .model-list {
             list-style: none;
         }
 
+
         .model-list li {
             padding: 12px 0;
+
             border-bottom: 1px solid var(--border);
+
             color: #d7dee7;
+
             font-size: 13px;
         }
+
 
         .model-list li:last-child {
             border-bottom: 0;
         }
 
+
         .model-list li::before {
             content: "✓";
+
             color: var(--green);
+
             margin-right: 10px;
+
             font-weight: 800;
         }
+
 
         /* =========================
            ABOUT
-        ========================= */
+        ========================== */
 
         .about {
             display: grid;
+
             grid-template-columns: 1.1fr 0.9fr;
+
             gap: 80px;
+
             align-items: start;
         }
 
+
         .about p {
             color: var(--muted);
+
             margin-bottom: 16px;
+
             max-width: 650px;
         }
 
+
         .about-list {
             list-style: none;
+
             border-top: 1px solid var(--border);
         }
 
+
         .about-list li {
             padding: 13px 0;
+
             border-bottom: 1px solid var(--border);
+
             color: #dce2e9;
+
             font-size: 13px;
         }
 
+
         .about-list li::before {
             content: "✓";
+
             color: var(--green);
+
             margin-right: 12px;
+
             font-weight: 800;
         }
 
+
         /* =========================
            CTA
-        ========================= */
+        ========================== */
 
         .cta {
             text-align: center;
+
             padding: 100px 30px;
+
             background:
                 linear-gradient(
                     135deg,
                     rgba(56, 227, 155, 0.075),
                     rgba(77, 141, 255, 0.055)
                 );
+
             border: 1px solid var(--border);
+
             border-radius: 24px;
+
             margin-bottom: 80px;
         }
 
+
         .cta h2 {
             font-size: clamp(36px, 5vw, 58px);
+
             letter-spacing: -2.8px;
+
             line-height: 1;
+
             margin-bottom: 20px;
         }
 
+
         .cta p {
             color: var(--muted);
+
             max-width: 630px;
+
             margin: 0 auto 30px;
         }
 
+
         /* =========================
            FOOTER
-        ========================= */
+        ========================== */
 
         footer {
             border-top: 1px solid var(--border);
+
             padding: 30px 0;
+
             color: var(--muted);
+
             font-size: 12px;
+
             text-align: center;
         }
 
+
         /* =========================
            MOBILE
-        ========================= */
+        ========================== */
 
         @media (max-width: 900px) {
+
             .proof-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
 
             .case-grid {
                 grid-template-columns: 1fr;
             }
 
+
+            .systems-grid {
+                grid-template-columns: 1fr;
+            }
+
+
             .services {
                 grid-template-columns: repeat(2, 1fr);
             }
+
 
             .operating-model {
                 grid-template-columns: 1fr;
             }
 
+
             .about {
                 grid-template-columns: 1fr;
+
                 gap: 45px;
             }
         }
 
+
         @media (max-width: 650px) {
+
             .container {
                 width: min(92%, 1160px);
             }
+
 
             nav {
                 height: 70px;
             }
 
+
             .nav-links {
                 display: none;
             }
+
 
             .hero {
                 padding: 90px 0 80px;
             }
 
+
             .hero h1 {
                 font-size: 48px;
+
                 letter-spacing: -2.8px;
             }
+
 
             .hero p {
                 font-size: 16px;
             }
 
+
             section {
                 padding: 75px 0;
             }
+
 
             .proof-grid,
             .services {
                 grid-template-columns: 1fr;
             }
 
+
             .case-card {
                 min-height: auto;
+
                 padding: 28px;
             }
+
 
             .case-card h3 {
                 font-size: 28px;
             }
 
+
             .case-results {
                 grid-template-columns: 1fr 1fr;
             }
+
 
             .section-title {
                 letter-spacing: -1.8px;
             }
 
+
             .cta {
                 padding: 75px 22px;
             }
+
+
+            .system-card {
+                padding: 28px;
+            }
+
+
+            .system-header {
+                flex-direction: column;
+
+                gap: 10px;
+            }
         }
 
+
         @media (max-width: 420px) {
+
             .hero h1 {
                 font-size: 43px;
             }
+
 
             .buttons {
                 flex-direction: column;
             }
 
+
             .buttons .btn {
                 width: 100%;
             }
 
+
             .case-results {
                 grid-template-columns: 1fr;
             }
+
+
+            .resource {
+                padding: 14px;
+            }
         }
+
     </style>
+
 </head>
 
+
 <body>
+
 
     <!-- =========================
          NAVIGATION
     ========================== -->
 
     <div class="container">
+
         <nav>
-            <div class="logo">IBRAHIM ZAHID</div>
+
+            <div class="logo">
+                IBRAHIM ZAHID
+            </div>
+
 
             <div class="nav-links">
-                <a href="#case-studies">Case Studies</a>
-                <a href="#capabilities">Capabilities</a>
-                <a href="#about">About</a>
+
+                <a href="#case-studies">
+                    Case Studies
+                </a>
+
+                <a href="#reports">
+                    Reports
+                </a>
+
+                <a href="#capabilities">
+                    Capabilities
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
             </div>
+
         </nav>
+
     </div>
 
 
+
     <main>
+
 
         <!-- =========================
              HERO
@@ -775,30 +1310,43 @@
                     Performance Media Buyer
                 </div>
 
+
                 <h1>
+
                     I scale paid acquisition around
-                    <span>real business outcomes.</span>
+
+                    <span>
+                        real business outcomes.
+                    </span>
+
                 </h1>
 
+
                 <p>
+
                     Performance media buying focused on qualified lead generation,
                     call quality, CPA optimization, creative testing and controlled
                     campaign scaling.
+
                 </p>
+
 
                 <div class="buttons">
 
                     <a
                         class="btn btn-primary"
-                        href="#case-studies">
+                        href="#case-studies"
+                    >
                         View Case Studies
                     </a>
+
 
                     <a
                         class="btn btn-secondary"
                         href="https://www.linkedin.com/in/muhammad-ibrahim-bin-zahid-115590231"
                         target="_blank"
-                        rel="noopener noreferrer">
+                        rel="noopener noreferrer"
+                    >
                         Connect on LinkedIn
                     </a>
 
@@ -807,6 +1355,7 @@
             </div>
 
         </section>
+
 
 
         <!-- =========================
@@ -819,44 +1368,73 @@
 
                 <div class="proof-grid">
 
+
                     <div class="proof-card">
-                        <div class="proof-number">$5.4M+</div>
+
+                        <div class="proof-number">
+                            $5.4M+
+                        </div>
+
                         <div class="proof-label">
                             Debt Relief revenue generated
                         </div>
+
                     </div>
 
+
                     <div class="proof-card">
-                        <div class="proof-number">272K+</div>
+
+                        <div class="proof-number">
+                            272K+
+                        </div>
+
                         <div class="proof-label">
                             Debt Relief monetized qualified calls
                         </div>
+
                     </div>
 
+
                     <div class="proof-card">
-                        <div class="proof-number">$10K+</div>
+
+                        <div class="proof-number">
+                            $10K+
+                        </div>
+
                         <div class="proof-label">
                             Daily media spend at scale
                         </div>
+
                     </div>
 
+
                     <div class="proof-card">
-                        <div class="proof-number">3</div>
-                        <div class="proof-label">
-                            Major acquisition platforms
+
+                        <div class="proof-number">
+                            $4.41M
                         </div>
+
+                        <div class="proof-label">
+                            ACA revenue generated
+                        </div>
+
                     </div>
+
 
                 </div>
 
+
                 <div class="proof-note">
+
                     Selected results from individual engagements. Metrics are not
                     presented as a combined portfolio total.
+
                 </div>
 
             </div>
 
         </section>
+
 
 
         <!-- =========================
@@ -867,18 +1445,23 @@
 
             <div class="container">
 
+
                 <div class="section-label">
                     Selected Experience
                 </div>
+
 
                 <h2 class="section-title">
                     Performance systems built around economics.
                 </h2>
 
+
                 <p class="section-description">
+
                     Selected paid acquisition engagements across high-volume
                     lead generation and qualified-call acquisition. Each case
                     study represents a separate performance operation.
+
                 </p>
 
 
@@ -889,39 +1472,52 @@
 
                     <article class="case-card aca">
 
+
                         <div class="case-top">
+
                             <div class="case-index">
                                 CASE STUDY 01
                             </div>
 
                             <div class="case-status">
-                                ACA Lead Generation
+                                ACA · 2023
                             </div>
+
                         </div>
+
 
                         <h3>
                             Scaling U.S. ACA Lead Generation
                         </h3>
 
+
                         <p>
+
                             A paid acquisition operation focused on generating
                             qualified calls and improving campaign economics
                             through structured testing, optimization and
                             controlled scaling across Google Ads and Meta.
+
                         </p>
 
+
                         <div class="case-tags">
+
                             <span class="tag">Google Ads</span>
                             <span class="tag">Meta</span>
                             <span class="tag">ACA</span>
                             <span class="tag">Lead Generation</span>
                             <span class="tag">Qualified Calls</span>
                             <span class="tag">U.S. Market</span>
+
                         </div>
+
 
                         <div class="case-results">
 
+
                             <div class="result">
+
                                 <div class="result-number">
                                     ~$220 → &lt;$90
                                 </div>
@@ -929,9 +1525,12 @@
                                 <div class="result-label">
                                     CPA improvement
                                 </div>
+
                             </div>
 
+
                             <div class="result">
+
                                 <div class="result-number">
                                     20
                                 </div>
@@ -939,19 +1538,25 @@
                                 <div class="result-label">
                                     Accounts managed
                                 </div>
+
                             </div>
 
+
                             <div class="result">
+
                                 <div class="result-number">
                                     $4.41M
                                 </div>
 
                                 <div class="result-label">
-                                    Ringba-reported revenue
+                                    Revenue generated
                                 </div>
+
                             </div>
 
+
                             <div class="result">
+
                                 <div class="result-number">
                                     470K+
                                 </div>
@@ -959,58 +1564,77 @@
                                 <div class="result-label">
                                     Incoming calls
                                 </div>
+
                             </div>
+
 
                         </div>
 
+
                         <a
                             class="btn btn-primary"
-                            href="case-studies/ACA_Lead_Generation_Media_Buying_Case_Study_2025.pptx"
+                            href="case-studies/ACA_Lead_Generation_Media_Buying_Case_Study_2023.pptx"
                             target="_blank"
-                            rel="noopener noreferrer">
+                            rel="noopener noreferrer"
+                        >
                             View ACA Case Study →
                         </a>
 
+
                     </article>
+
 
 
                     <!-- DEBT RELIEF CASE STUDY -->
 
                     <article class="case-card debt">
 
+
                         <div class="case-top">
+
                             <div class="case-index">
                                 CASE STUDY 02
                             </div>
 
                             <div class="case-status">
-                                Debt Relief
+                                Debt Relief · 2024–2025
                             </div>
+
                         </div>
+
 
                         <h3>
                             Scaling Debt Relief Lead Generation
                         </h3>
 
+
                         <p>
+
                             A two-year, full-funnel acquisition operation focused
                             on qualified-call monetization, creative-led
                             qualification and scalable performance across
                             Google, Meta and TikTok.
+
                         </p>
 
+
                         <div class="case-tags">
+
                             <span class="tag">Google</span>
                             <span class="tag">Meta</span>
                             <span class="tag">TikTok</span>
                             <span class="tag">Debt Relief</span>
                             <span class="tag">Qualified Calls</span>
                             <span class="tag">U.S. Nationwide</span>
+
                         </div>
+
 
                         <div class="case-results">
 
+
                             <div class="result">
+
                                 <div class="result-number">
                                     $5.4M+
                                 </div>
@@ -1018,9 +1642,12 @@
                                 <div class="result-label">
                                     Revenue generated
                                 </div>
+
                             </div>
 
+
                             <div class="result">
+
                                 <div class="result-number">
                                     $3.7M+
                                 </div>
@@ -1028,9 +1655,12 @@
                                 <div class="result-label">
                                     Media spend
                                 </div>
+
                             </div>
 
+
                             <div class="result">
+
                                 <div class="result-number">
                                     935K+
                                 </div>
@@ -1038,9 +1668,12 @@
                                 <div class="result-label">
                                     Calls generated
                                 </div>
+
                             </div>
 
+
                             <div class="result">
+
                                 <div class="result-number">
                                     272K+
                                 </div>
@@ -1048,25 +1681,298 @@
                                 <div class="result-label">
                                     Monetized qualified calls
                                 </div>
+
                             </div>
+
 
                         </div>
 
+
                         <a
                             class="btn btn-primary"
-                            href="case-studies/DEBT_Lead_Generation_Media_Buying_Case_Study.pptx"
+                            href="case-studies/DEBT_Lead_Generation_Media_Buying_Case_Study_2024-2025.pptx"
                             target="_blank"
-                            rel="noopener noreferrer">
+                            rel="noopener noreferrer"
+                        >
                             View Debt Relief Case Study →
                         </a>
 
+
                     </article>
+
 
                 </div>
 
             </div>
 
         </section>
+
+
+
+        <!-- =========================
+             PERFORMANCE SYSTEMS
+        ========================== -->
+
+        <section id="reports">
+
+            <div class="container">
+
+
+                <div class="section-label">
+                    Performance Systems
+                </div>
+
+
+                <h2 class="section-title">
+                    The process behind the performance.
+                </h2>
+
+
+                <p class="section-description">
+
+                    Go beyond the headline results. These reports document the
+                    media-buying processes, creative testing frameworks and
+                    performance data behind each acquisition operation.
+
+                </p>
+
+
+                <div class="systems-grid">
+
+
+                    <!-- ACA SYSTEM -->
+
+                    <article class="system-card aca">
+
+
+                        <div class="system-header">
+
+                            <h3>
+                                ACA Acquisition System
+                            </h3>
+
+                            <div class="system-year">
+                                2023
+                            </div>
+
+                        </div>
+
+
+                        <p>
+
+                            The operating framework behind ACA paid acquisition,
+                            including media-buying rules, creative testing and
+                            paid-media performance.
+
+                        </p>
+
+
+                        <div class="resource-list">
+
+
+                            <a
+                                class="resource"
+                                href="SOP/ACA_Media_Buying_SOP_Process.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+
+                                <div class="resource-info">
+
+                                    <div class="resource-title">
+                                        Media Buying SOP
+                                    </div>
+
+                                    <div class="resource-description">
+                                        Acquisition process, CPA rules and scaling framework
+                                    </div>
+
+                                </div>
+
+                                <div class="resource-arrow">
+                                    →
+                                </div>
+
+                            </a>
+
+
+                            <a
+                                class="resource"
+                                href="creative-testing-report/ACA_Creative_Testing_And_Performance_Report.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+
+                                <div class="resource-info">
+
+                                    <div class="resource-title">
+                                        Creative Testing & Performance
+                                    </div>
+
+                                    <div class="resource-description">
+                                        Creative testing methodology and downstream evaluation
+                                    </div>
+
+                                </div>
+
+                                <div class="resource-arrow">
+                                    →
+                                </div>
+
+                            </a>
+
+
+                            <a
+                                class="resource"
+                                href="paid-media-performance/ACA_Paid_Media_Performance_Report.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+
+                                <div class="resource-info">
+
+                                    <div class="resource-title">
+                                        Paid Media Performance
+                                    </div>
+
+                                    <div class="resource-description">
+                                        2023 acquisition performance and scaling results
+                                    </div>
+
+                                </div>
+
+                                <div class="resource-arrow">
+                                    →
+                                </div>
+
+                            </a>
+
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- DEBT SYSTEM -->
+
+                    <article class="system-card debt">
+
+
+                        <div class="system-header">
+
+                            <h3>
+                                Debt Relief Acquisition System
+                            </h3>
+
+                            <div class="system-year">
+                                2024–2025
+                            </div>
+
+                        </div>
+
+
+                        <p>
+
+                            The operating framework behind a two-year debt relief
+                            acquisition operation, from creative testing through
+                            qualified-call monetization and controlled scaling.
+
+                        </p>
+
+
+                        <div class="resource-list">
+
+
+                            <a
+                                class="resource"
+                                href="SOP/DEBT_Media_Buying_SOP_Process.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+
+                                <div class="resource-info">
+
+                                    <div class="resource-title">
+                                        Media Buying SOP
+                                    </div>
+
+                                    <div class="resource-description">
+                                        Buyer CPA, acquisition economics and scaling rules
+                                    </div>
+
+                                </div>
+
+                                <div class="resource-arrow">
+                                    →
+                                </div>
+
+                            </a>
+
+
+                            <a
+                                class="resource"
+                                href="creative-testing-report/DEBT_Creative_Testing_And_Performance_Report.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+
+                                <div class="resource-info">
+
+                                    <div class="resource-title">
+                                        Creative Testing & Performance
+                                    </div>
+
+                                    <div class="resource-description">
+                                        Creative qualification, testing and iteration framework
+                                    </div>
+
+                                </div>
+
+                                <div class="resource-arrow">
+                                    →
+                                </div>
+
+                            </a>
+
+
+                            <a
+                                class="resource"
+                                href="paid-media-performance/DEBT_Paid_Media_Performance_Report.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+
+                                <div class="resource-info">
+
+                                    <div class="resource-title">
+                                        Paid Media Performance
+                                    </div>
+
+                                    <div class="resource-description">
+                                        Two-year acquisition performance and scaling results
+                                    </div>
+
+                                </div>
+
+                                <div class="resource-arrow">
+                                    →
+                                </div>
+
+                            </a>
+
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
 
 
         <!-- =========================
@@ -1077,109 +1983,197 @@
 
             <div class="container">
 
+
                 <div class="section-label">
                     Capabilities
                 </div>
+
 
                 <h2 class="section-title">
                     Paid acquisition built around the numbers that matter.
                 </h2>
 
+
                 <p class="section-description">
+
                     My approach combines media buying, creative testing,
                     funnel optimization and downstream performance data
                     to improve acquisition economics.
+
                 </p>
 
 
                 <div class="services">
 
+
                     <div class="service">
+
                         <div class="service-number">01</div>
-                        <h3>Google Ads</h3>
+
+                        <h3>
+                            Google Ads
+                        </h3>
+
                         <p>
+
                             Search and video campaign management, keyword
                             research, bidding strategy, testing and scaling.
+
                         </p>
+
                     </div>
 
+
                     <div class="service">
+
                         <div class="service-number">02</div>
-                        <h3>Meta Ads</h3>
+
+                        <h3>
+                            Meta Ads
+                        </h3>
+
                         <p>
+
                             Broad acquisition, creative testing, campaign
                             architecture and performance optimization.
+
                         </p>
+
                     </div>
 
+
                     <div class="service">
+
                         <div class="service-number">03</div>
-                        <h3>TikTok Ads</h3>
+
+                        <h3>
+                            TikTok Ads
+                        </h3>
+
                         <p>
+
                             Video-first acquisition, creative testing and
                             controlled scaling using performance-based bidding.
+
                         </p>
+
                     </div>
 
+
                     <div class="service">
+
                         <div class="service-number">04</div>
-                        <h3>Lead Generation</h3>
+
+                        <h3>
+                            Lead Generation
+                        </h3>
+
                         <p>
+
                             Acquisition systems designed around qualified
                             leads, inbound calls and monetizable outcomes.
+
                         </p>
+
                     </div>
 
+
                     <div class="service">
+
                         <div class="service-number">05</div>
-                        <h3>CPA Optimization</h3>
+
+                        <h3>
+                            CPA Optimization
+                        </h3>
+
                         <p>
+
                             Structured decision-making using acquisition cost,
                             call quality and downstream performance data.
+
                         </p>
+
                     </div>
 
+
                     <div class="service">
+
                         <div class="service-number">06</div>
-                        <h3>Campaign Scaling</h3>
+
+                        <h3>
+                            Campaign Scaling
+                        </h3>
+
                         <p>
+
                             Controlled budget expansion once campaigns
                             demonstrate consistent economic performance.
+
                         </p>
+
                     </div>
 
+
                     <div class="service">
+
                         <div class="service-number">07</div>
-                        <h3>Creative Testing</h3>
+
+                        <h3>
+                            Creative Testing
+                        </h3>
+
                         <p>
+
                             Hook, angle and messaging tests designed to
                             improve both acquisition efficiency and lead quality.
+
                         </p>
+
                     </div>
 
+
                     <div class="service">
+
                         <div class="service-number">08</div>
-                        <h3>Funnel Optimization</h3>
+
+                        <h3>
+                            Funnel Optimization
+                        </h3>
+
                         <p>
+
                             Landing-page and qualification-path improvements
                             focused on increasing the quality of acquired traffic.
+
                         </p>
+
                     </div>
 
+
                     <div class="service">
+
                         <div class="service-number">09</div>
-                        <h3>Performance Analytics</h3>
+
+                        <h3>
+                            Performance Analytics
+                        </h3>
+
                         <p>
+
                             Translating downstream buyer data into targeting,
                             budget and creative decisions.
+
                         </p>
+
                     </div>
+
 
                 </div>
 
             </div>
 
         </section>
+
 
 
         <!-- =========================
@@ -1190,22 +2184,28 @@
 
             <div class="container">
 
+
                 <div class="section-label">
                     Operating Model
                 </div>
+
 
                 <h2 class="section-title">
                     I optimize beyond the ad platform.
                 </h2>
 
+
                 <p class="section-description">
+
                     Strong paid acquisition is not just about generating cheap
                     clicks. The goal is to acquire traffic that creates measurable
                     value downstream.
+
                 </p>
 
 
                 <div class="operating-model">
+
 
                     <div class="model-card">
 
@@ -1213,17 +2213,27 @@
                             Acquisition
                         </h3>
 
+
                         <p>
+
                             Build and test campaigns around the economics
                             required by the business.
+
                         </p>
 
+
                         <ul class="model-list">
+
                             <li>Audience research</li>
+
                             <li>Creative testing</li>
+
                             <li>Campaign architecture</li>
+
                             <li>Budget allocation</li>
+
                             <li>Controlled scaling</li>
+
                         </ul>
 
                     </div>
@@ -1235,26 +2245,38 @@
                             Downstream Quality
                         </h3>
 
+
                         <p>
+
                             Feed real performance data back into acquisition
                             decisions rather than optimizing to platform metrics alone.
+
                         </p>
 
+
                         <ul class="model-list">
+
                             <li>CPA monitoring</li>
+
                             <li>Call-quality analysis</li>
+
                             <li>Qualification performance</li>
+
                             <li>Buyer feedback loops</li>
+
                             <li>Descale / scale decisions</li>
+
                         </ul>
 
                     </div>
+
 
                 </div>
 
             </div>
 
         </section>
+
 
 
         <!-- =========================
@@ -1265,71 +2287,106 @@
 
             <div class="container">
 
+
                 <div class="about">
 
+
                     <div>
+
 
                         <div class="section-label">
                             About
                         </div>
 
+
                         <h2 class="section-title">
                             Media buying with a focus on measurable outcomes.
                         </h2>
 
+
                         <p>
+
                             I'm a performance media buyer specializing in
                             lead generation, qualified-call acquisition and
                             scalable paid media.
+
                         </p>
 
+
                         <p>
+
                             My approach combines structured testing,
                             disciplined optimization, creative strategy and
                             downstream performance data to find and scale
                             profitable acquisition opportunities.
+
                         </p>
 
+
                         <p>
+
                             I've worked across high-volume acquisition
                             environments where campaign success depends on
                             more than platform metrics alone.
+
                         </p>
+
 
                     </div>
 
 
                     <div>
 
+
                         <ul class="about-list">
 
-                            <li>Google Ads + Meta + TikTok</li>
+                            <li>
+                                Google Ads + Meta + TikTok
+                            </li>
 
-                            <li>Qualified-call acquisition</li>
+                            <li>
+                                Qualified-call acquisition
+                            </li>
 
-                            <li>CPA and unit-economics optimization</li>
+                            <li>
+                                CPA and unit-economics optimization
+                            </li>
 
-                            <li>Creative strategy and testing</li>
+                            <li>
+                                Creative strategy and testing
+                            </li>
 
-                            <li>Audience and keyword research</li>
+                            <li>
+                                Audience and keyword research
+                            </li>
 
-                            <li>Landing-page and funnel optimization</li>
+                            <li>
+                                Landing-page and funnel optimization
+                            </li>
 
-                            <li>Multi-account campaign management</li>
+                            <li>
+                                Multi-account campaign management
+                            </li>
 
-                            <li>Controlled performance scaling</li>
+                            <li>
+                                Controlled performance scaling
+                            </li>
 
-                            <li>Downstream buyer feedback loops</li>
+                            <li>
+                                Downstream buyer feedback loops
+                            </li>
 
                         </ul>
 
                     </div>
+
 
                 </div>
 
             </div>
 
         </section>
+
 
 
         <!-- =========================
@@ -1340,39 +2397,52 @@
 
             <div class="container">
 
+
                 <div class="cta">
+
 
                     <div class="section-label">
                         Let's Work Together
                     </div>
 
+
                     <h2>
                         Need paid acquisition that scales?
                     </h2>
 
+
                     <p>
+
                         If you need a media buyer who can manage acquisition
                         around CPA, lead quality, call performance and
                         measurable business outcomes, let's discuss your campaign.
+
                     </p>
 
+
                     <div class="buttons">
+
 
                         <a
                             class="btn btn-primary"
                             href="https://www.linkedin.com/in/muhammad-ibrahim-bin-zahid-115590231"
                             target="_blank"
-                            rel="noopener noreferrer">
+                            rel="noopener noreferrer"
+                        >
                             Connect on LinkedIn →
                         </a>
 
+
                         <a
                             class="btn btn-secondary"
-                            href="mailto:buttibrahim848@email.com">
+                            href="mailto:buttibrahim848@email.com"
+                        >
                             Email Me
                         </a>
 
+
                     </div>
+
 
                 </div>
 
@@ -1380,7 +2450,9 @@
 
         </section>
 
+
     </main>
+
 
 
     <!-- =========================
@@ -1388,10 +2460,16 @@
     ========================== -->
 
     <footer>
+
         <div class="container">
+
             © 2026 IBRAHIM ZAHID · Performance Media Buyer
+
         </div>
+
     </footer>
 
+
 </body>
+
 </html>
