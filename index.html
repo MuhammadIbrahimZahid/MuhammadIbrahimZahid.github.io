@@ -245,10 +245,79 @@
     .timeline-item ul { padding-left: 18px; color: #c8d0db; font-size: 13px; display: grid; gap: 5px; }
 
     /* CERTIFICATIONS */
-    .cert-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-    .cert-card { padding: 20px; border: 1px solid var(--border); border-radius: 12px; background: var(--card); text-align: center; }
-    .cert-card .cert-name { font-size: 13px; font-weight: 750; color: #e5eaf0; }
-    .cert-card .cert-note { font-size: 11px; color: #727d8b; margin-top: 4px; }
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.cert-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 26px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--card);
+    text-align: left;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--border-strong);
+    background: var(--card-hover);
+}
+
+.cert-badge {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    background: #ff7a59;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 850;
+}
+
+.cert-content {
+    flex: 1;
+}
+
+.cert-card .cert-name {
+    font-size: 17px;
+    font-weight: 750;
+    letter-spacing: -0.3px;
+    color: #e5eaf0;
+}
+
+.cert-issuer {
+    margin-top: 4px;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.cert-card .cert-note {
+    margin-top: 10px;
+    color: #727d8b;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.cert-link {
+    margin-top: 20px;
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 750;
+}
 
     /* CAPABILITIES */
     .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; }
@@ -285,7 +354,7 @@
 
     @media (max-width: 900px) {
         .proof-grid { grid-template-columns: repeat(2, 1fr); }
-        .cert-grid { grid-template-columns: repeat(2, 1fr); }
+        .cert-grid {  grid-template-columns: 1fr; }
         .case-grid { grid-template-columns: 1fr; }
         .systems-grid { grid-template-columns: 1fr; }
         .services { grid-template-columns: repeat(2, 1fr); }
@@ -653,32 +722,60 @@
         </div>
     </section>
 
-    <!-- CERTIFICATIONS -->
-    <section>
-        <div class="container">
-            <div class="section-label">Tools & Certifications</div>
-            <h2 class="section-title">Platforms I work in daily.</h2>
-            <!-- TODO: remove any you don't hold, add real certification links where available -->
-            <div class="cert-grid">
-                <div class="cert-card">
-                    <div class="cert-name">Google Ads</div>
-                    <div class="cert-note">Search & Video</div>
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+    <div class="container">
+        <div class="section-label">Certifications</div>
+        <h2 class="section-title">Certified in modern digital marketing.</h2>
+        <p class="section-description">
+            HubSpot Academy certifications covering digital marketing and
+            social media strategy, with an inbound-focused approach to
+            acquisition, content, engagement and measurement.
+        </p>
+
+        <div class="cert-grid">
+
+            <a
+                class="cert-card"
+                href="https://app-na2.hubspot.com/academy/achievements/qf7d4p6j/en/1/ibrahim-zahid/digital-marketing-certified"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Verify Digital Marketing Certified credential from HubSpot"
+            >
+                <div class="cert-badge">H</div>
+                <div class="cert-content">
+                    <div class="cert-name">Digital Marketing Certified</div>
+                    <div class="cert-issuer">HubSpot Academy</div>
+                    <div class="cert-note">
+                        Digital marketing, SEO, social media, video, advertising
+                        & performance measurement
+                    </div>
                 </div>
-                <div class="cert-card">
-                    <div class="cert-name">Meta Ads Manager</div>
-                    <div class="cert-note">Broad + Creative-led</div>
+                <div class="cert-link">Verify credential →</div>
+            </a>
+
+            <a
+                class="cert-card"
+                href="https://app-na2.hubspot.com/academy/achievements/yyh7q6tk/en/1/ibrahim-zahid/social-media-certified"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Verify Social Media Certified credential from HubSpot"
+            >
+                <div class="cert-badge">H</div>
+                <div class="cert-content">
+                    <div class="cert-name">Social Media Certified</div>
+                    <div class="cert-issuer">HubSpot Academy</div>
+                    <div class="cert-note">
+                        Social strategy, monitoring, engagement, content,
+                        social ROI & inbound methodology
+                    </div>
                 </div>
-                <div class="cert-card">
-                    <div class="cert-name">TikTok Ads</div>
-                    <div class="cert-note">Video-first testing</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-name">Ringba</div>
-                    <div class="cert-note">Call tracking & attribution</div>
-                </div>
-            </div>
+                <div class="cert-link">Verify credential →</div>
+            </a>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="capabilities">
         <div class="container">
