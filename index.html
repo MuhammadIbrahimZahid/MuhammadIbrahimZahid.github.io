@@ -307,6 +307,42 @@
     .data-proof-metric .num { font-size: 17px; font-weight: 850; letter-spacing: -0.5px; color: #fff; }
     .data-proof-metric .lbl { font-size: 10px; color: #6e7784; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 3px; }
 
+    /* INLINE DOCUMENT PREVIEW — teaser graphic shown before the download click */
+    .doc-preview {
+        margin-bottom: 18px;
+        border: 1px solid var(--border);
+        border-radius: 13px;
+        padding: 17px 18px 16px;
+        background: rgba(255,255,255,0.022);
+    }
+    .doc-preview-label {
+        display: flex; align-items: center; gap: 8px;
+        font-size: 10px; text-transform: uppercase; letter-spacing: 1px;
+        color: #6e7784; margin-bottom: 15px;
+    }
+    .doc-preview-label .icon-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
+    .preview-bars { display: grid; gap: 11px; }
+    .preview-bar-row { display: flex; align-items: center; gap: 12px; }
+    .preview-bar-tag { width: 46px; font-size: 11px; color: #8a93a1; flex-shrink: 0; }
+    .preview-bar-track {
+        flex: 1; height: 9px; border-radius: 6px;
+        background: rgba(255,255,255,0.06);
+        overflow: hidden;
+    }
+    .preview-bar-fill {
+        height: 100%; border-radius: 6px;
+        width: 0;
+        transition: width 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .preview-bar-fill.before { background: rgba(255,255,255,0.2); }
+    .preview-bar-fill.after {
+        background: linear-gradient(90deg, var(--green), #7ff0c4);
+        box-shadow: 0 0 14px rgba(52,211,153,0.4);
+    }
+    .doc-preview.in-view .preview-bar-fill { width: var(--w); }
+    .preview-bar-value { width: 64px; text-align: right; font-size: 12px; font-weight: 800; color: #fff; flex-shrink: 0; }
+    .doc-preview-caption { margin-top: 13px; color: #6e7784; font-size: 10.5px; }
+
     /* CASE STUDIES */
     #case-studies { padding-top: 110px; }
     .case-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
@@ -742,7 +778,24 @@
                     <div class="case-caveat">
                         Figures are rounded; full methodology and limitations are in the report.
                     </div>
-    
+
+                    <div class="doc-preview">
+                        <div class="doc-preview-label"><span class="icon-dot"></span> Inside the report — CPA before/after</div>
+                        <div class="preview-bars">
+                            <div class="preview-bar-row">
+                                <div class="preview-bar-tag">Before</div>
+                                <div class="preview-bar-track"><div class="preview-bar-fill before" style="--w:100%"></div></div>
+                                <div class="preview-bar-value">~$220</div>
+                            </div>
+                            <div class="preview-bar-row">
+                                <div class="preview-bar-tag">After</div>
+                                <div class="preview-bar-track"><div class="preview-bar-fill after" style="--w:41%"></div></div>
+                                <div class="preview-bar-value">&lt;$90</div>
+                            </div>
+                        </div>
+                        <div class="doc-preview-caption">Full CPA trendline, account-by-account breakdown and scaling rules are in the SOP &amp; performance report.</div>
+                    </div>
+
                     <a
                         class="btn btn-primary"
                         href="case-studies/ACA_Lead_Generation_Media_Buying_Case_Study_2023.pptx"
@@ -800,7 +853,24 @@
                     <div class="case-caveat">
                         Revenue-to-spend, not net profit; costs outside media spend are excluded.
                     </div>
-    
+
+                    <div class="doc-preview">
+                        <div class="doc-preview-label"><span class="icon-dot"></span> Inside the report — buyer CPA before/after</div>
+                        <div class="preview-bars">
+                            <div class="preview-bar-row">
+                                <div class="preview-bar-tag">Before</div>
+                                <div class="preview-bar-track"><div class="preview-bar-fill before" style="--w:100%"></div></div>
+                                <div class="preview-bar-value">$2,000+</div>
+                            </div>
+                            <div class="preview-bar-row">
+                                <div class="preview-bar-tag">After</div>
+                                <div class="preview-bar-track"><div class="preview-bar-fill after" style="--w:45%"></div></div>
+                                <div class="preview-bar-value">&lt;$900</div>
+                            </div>
+                        </div>
+                        <div class="doc-preview-caption">Creative-qualification framework, call-monetization funnel and 2-year scaling curve are in the SOP &amp; performance report.</div>
+                    </div>
+
                     <a
                         class="btn btn-primary"
                         href="case-studies/DEBT_Lead_Generation_Media_Buying_Case_Study.pptx"
@@ -1236,6 +1306,22 @@
             toggle.setAttribute('aria-expanded', 'false');
         });
     });
+
+    // Animate the "Inside the report" preview bars in when scrolled into view
+    const previewEls = document.querySelectorAll('.doc-preview');
+    if ('IntersectionObserver' in window && previewEls.length) {
+        const previewObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    previewObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.35 });
+        previewEls.forEach(el => previewObserver.observe(el));
+    } else {
+        previewEls.forEach(el => el.classList.add('in-view'));
+    }
 </script>
 
 </body>
