@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ibrahim Zahid | Performance Marketer & Paid Acquisition</title>
+<title>Ibrahim Zahid | Performance Marketer &amp; Paid Acquisition</title>
 <meta name="description" content="Performance Marketer specializing in paid acquisition, lead generation, qualified calls, CPA optimization, creative testing and campaign scaling.">
 <meta name="author" content="Ibrahim Zahid">
 
@@ -190,6 +190,123 @@
     .compliance-strip p { color: var(--muted-light); font-size: 13px; max-width: 780px; }
     .compliance-strip strong { color: #fff; }
 
+    /* VERIFIED DATA / LIVE REPORT PROOF */
+    .data-proof-wrap { padding-top: 60px; }
+    .data-proof-head {
+        display: flex; align-items: flex-end; justify-content: space-between;
+        gap: 24px; flex-wrap: wrap; margin-bottom: 30px;
+    }
+    .data-proof-head .heading-block { max-width: 640px; }
+    .data-proof-head h2 { font-size: clamp(26px, 3.2vw, 36px); letter-spacing: -1.6px; margin-bottom: 10px; }
+    .data-proof-head p { color: var(--muted); font-size: 14px; }
+    .verified-badge {
+        display: inline-flex; align-items: center; gap: 9px;
+        border: 1px solid rgba(52,211,153,0.28);
+        background: rgba(52,211,153,0.06);
+        color: var(--muted-light);
+        font-size: 12px; font-weight: 700;
+        letter-spacing: 0.3px;
+        border-radius: 50px;
+        padding: 9px 15px;
+        white-space: nowrap;
+    }
+    .verified-badge .pulse-dot { position: relative; width: 8px; height: 8px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
+    .verified-badge .pulse-dot::after {
+        content: ""; position: absolute; inset: -5px; border-radius: 50%;
+        border: 1px solid var(--green); opacity: 0.55;
+        animation: pulseRing 2.2s ease-out infinite;
+    }
+    @keyframes pulseRing {
+        0% { transform: scale(0.6); opacity: 0.6; }
+        100% { transform: scale(2.1); opacity: 0; }
+    }
+
+    .data-proof-card {
+        position: relative;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        overflow: hidden;
+        background: linear-gradient(145deg, rgba(18,23,31,1), rgba(13,17,25,1));
+        transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+    }
+    .data-proof-card:hover {
+        border-color: rgba(52,211,153,0.35);
+        box-shadow: 0 25px 60px -20px rgba(0,0,0,0.6), 0 0 0 1px rgba(52,211,153,0.12), 0 0 45px -10px rgba(52,211,153,0.16);
+        transform: translateY(-4px);
+    }
+
+    /* fake browser chrome so the dashboard grab reads as a live tool, not a random image */
+    .data-proof-chrome {
+        display: flex; align-items: center; gap: 14px;
+        padding: 13px 18px;
+        border-bottom: 1px solid var(--border);
+        background: rgba(255,255,255,0.015);
+    }
+    .chrome-dots { display: flex; gap: 6px; }
+    .chrome-dots span { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,0.14); }
+    .chrome-url {
+        flex: 1;
+        font-size: 11px; color: #6e7784;
+        background: rgba(255,255,255,0.03);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 5px 12px;
+        text-align: center;
+        letter-spacing: 0.2px;
+    }
+
+    .data-proof-image-wrap {
+        position: relative;
+        overflow: hidden;
+        cursor: zoom-in;
+        background: #05070a;
+    }
+    .data-proof-image-wrap img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transform: scale(1);
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+    }
+    .data-proof-image-wrap:hover img { transform: scale(1.045); }
+
+    .data-proof-image-wrap::before {
+        content: "";
+        position: absolute; inset: 0;
+        background: linear-gradient(to top, rgba(5,7,10,0.85) 0%, rgba(5,7,10,0) 22%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+    }
+    .data-proof-image-wrap:hover::before { opacity: 1; }
+
+    .data-proof-overlay {
+        position: absolute; left: 20px; right: 20px; bottom: 18px;
+        display: flex; align-items: center; justify-content: space-between;
+        gap: 12px;
+        color: #fff; font-size: 12px; font-weight: 750;
+        opacity: 0; transform: translateY(8px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        pointer-events: none;
+    }
+    .data-proof-image-wrap:hover .data-proof-overlay { opacity: 1; transform: translateY(0); }
+    .data-proof-overlay .expand-hint { display: flex; align-items: center; gap: 8px; letter-spacing: 0.3px; }
+    .data-proof-overlay .expand-arrow { font-size: 15px; transition: transform 0.35s ease; }
+    .data-proof-image-wrap:hover .expand-arrow { transform: translate(2px, -2px); }
+
+    .data-proof-caption {
+        display: flex; align-items: flex-start; justify-content: space-between;
+        gap: 24px; flex-wrap: wrap;
+        padding: 20px 22px;
+        border-top: 1px solid var(--border);
+    }
+    .data-proof-caption p { color: #8a93a1; font-size: 12px; max-width: 640px; line-height: 1.7; }
+    .data-proof-caption p strong { color: var(--muted-light); }
+    .data-proof-metrics { display: flex; gap: 22px; flex-wrap: wrap; }
+    .data-proof-metric { text-align: right; }
+    .data-proof-metric .num { font-size: 17px; font-weight: 850; letter-spacing: -0.5px; color: #fff; }
+    .data-proof-metric .lbl { font-size: 10px; color: #6e7784; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 3px; }
+
     /* CASE STUDIES */
     #case-studies { padding-top: 110px; }
     .case-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
@@ -362,6 +479,7 @@
         .services { grid-template-columns: repeat(2, 1fr); }
         .operating-model { grid-template-columns: 1fr; }
         .about { grid-template-columns: 1fr; gap: 45px; }
+        .data-proof-metrics { gap: 16px; }
     }
 
     @media (max-width: 650px) {
@@ -381,6 +499,11 @@
         .cta { padding: 65px 20px; }
         .system-card { padding: 26px; }
         .system-header { flex-direction: column; gap: 10px; }
+        .data-proof-wrap { padding-top: 40px; }
+        .data-proof-head { flex-direction: column; align-items: flex-start; }
+        .data-proof-caption { flex-direction: column; }
+        .data-proof-metrics { width: 100%; justify-content: space-between; gap: 10px; }
+        .data-proof-metric { text-align: left; }
     }
 
     @media (max-width: 420px) {
@@ -488,6 +611,73 @@
                     pre-qualify consumers rather than overstate offers — details in
                     the process reports below, not just the headline numbers.
                 </p>
+            </div>
+
+            <div class="data-proof-wrap">
+                <div class="data-proof-head">
+                    <div class="heading-block">
+                        <div class="section-label">Source Data</div>
+                        <h2>The numbers above, straight from call tracking.</h2>
+                        <p>
+                            A live export from Ringba, the call-tracking and attribution
+                            platform used across these engagements. Every headline figure
+                            on this page traces back to reporting like this — not a slide deck.
+                        </p>
+                    </div>
+                    <span class="verified-badge"><span class="pulse-dot"></span> Verified in Ringba</span>
+                </div>
+
+                <div class="data-proof-card">
+                    <div class="data-proof-chrome">
+                        <div class="chrome-dots"><span></span><span></span><span></span></div>
+                        <div class="chrome-url">app.ringba.com — Reporting</div>
+                    </div>
+
+                    <a
+                        class="data-proof-image-wrap"
+                        href="images/ringba-performance-dashboard.png"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open full-resolution Ringba reporting export in a new tab"
+                    >
+                        <img
+                            src="images/ringba-performance-dashboard.png"
+                            alt="Ringba call-tracking dashboard showing multi-year campaign reporting: 1.46M+ incoming calls, 1.3M+ completed calls, $10.26M reported revenue and $10.35M payout across 2023–2026."
+                            loading="lazy"
+                            width="1520"
+                            height="726"
+                        >
+                        <div class="data-proof-overlay">
+                            <span>Ringba · Reporting · Timeline &amp; Call Summary</span>
+                            <span class="expand-hint">Open full resolution <span class="expand-arrow">↗</span></span>
+                        </div>
+                    </a>
+
+                    <div class="data-proof-caption">
+                        <p>
+                            <strong>What you're looking at:</strong> the account-level Ringba
+                            summary spanning both the ACA (2023) and Debt Relief (2024–2025)
+                            engagements referenced above, plus early figures from a current
+                            2026 campaign. Call volume, connection rate, revenue and payout
+                            are pulled directly from the buyer-side reporting layer, not
+                            self-reported estimates.
+                        </p>
+                        <div class="data-proof-metrics">
+                            <div class="data-proof-metric">
+                                <div class="num">1.46M+</div>
+                                <div class="lbl">Incoming Calls</div>
+                            </div>
+                            <div class="data-proof-metric">
+                                <div class="num">$10.26M</div>
+                                <div class="lbl">Reported Revenue</div>
+                            </div>
+                            <div class="data-proof-metric">
+                                <div class="num">29.52%</div>
+                                <div class="lbl">Avg. Conversion</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
