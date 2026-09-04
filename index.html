@@ -496,12 +496,42 @@
     .model-list li:last-child { border-bottom: 0; }
     .model-list li::before { content: "✓"; color: var(--green); margin-right: 10px; font-weight: 800; }
 
-    /* ABOUT */
+   
+   
+    
+
+      /* ABOUT */
     .about { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; align-items: start; }
     .about p { color: var(--muted); margin-bottom: 16px; max-width: 650px; }
     .about-list { list-style: none; border-top: 1px solid var(--border); }
     .about-list li { padding: 13px 0; border-bottom: 1px solid var(--border); color: #dce2e9; font-size: 13px; }
     .about-list li::before { content: "✓"; color: var(--green); margin-right: 12px; font-weight: 800; }
+    
+    .about-photo-card {
+        display: flex; align-items: center; gap: 16px;
+        margin-bottom: 28px;
+        padding: 14px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: rgba(255,255,255,0.02);
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .about-photo-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(52,211,153,0.32);
+        box-shadow: 0 20px 45px -18px rgba(0,0,0,0.55), 0 0 28px -8px rgba(52,211,153,0.22);
+    }
+    .about-photo {
+        width: 76px; height: 76px;
+        border-radius: 14px;
+        object-fit: cover;
+        border: 1px solid var(--border-strong);
+        flex-shrink: 0;
+        transition: transform 0.4s ease;
+    }
+    .about-photo-card:hover .about-photo { transform: scale(1.04); }
+    .about-photo-name { font-size: 15px; font-weight: 750; letter-spacing: -0.2px; color: #fff; }
+    .about-photo-role { font-size: 12px; color: var(--green); font-weight: 700; margin-top: 2px; }
 
     /* CTA */
     .cta { text-align: center; padding: 90px 30px; background: linear-gradient(135deg, rgba(52,211,153,0.07), rgba(91,143,217,0.05)); border: 1px solid var(--border); border-radius: 24px; margin-bottom: 80px; }
@@ -1276,6 +1306,14 @@
                     <p>I've worked across high-volume, regulated acquisition environments where campaign success depends on more than platform metrics — and where compliance has to be part of the process, not an afterthought.</p>
                 </div>
                 <div>
+                    <div class="about-photo-card">
+                      <img class="about-photo" src="images/ibrahim-zahid-headshot.jpg" alt="Ibrahim Zahid, Performance Marketer" loading="lazy" width="76" height="76">
+                      <div>
+                        <div class="about-photo-name">Ibrahim Zahid</div>
+                        <div class="about-photo-role">Performance Marketer</div>
+                      </div>
+                    </div>
+                  
                     <ul class="about-list">
                         <li>Google Ads + Meta + TikTok</li>
                         <li>Qualified-call acquisition</li>
