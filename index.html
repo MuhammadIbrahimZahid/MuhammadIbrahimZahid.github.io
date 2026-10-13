@@ -541,6 +541,129 @@
     footer { border-top: 1px solid var(--border); padding: 30px 0; color: var(--muted); font-size: 12px; text-align: center; }
     footer a { text-decoration: underline; text-decoration-color: rgba(255,255,255,0.2); }
 
+    /* CONTACT FORM */
+    .contact-form {
+        width: 100%;
+        max-width: 560px;
+        margin: 30px auto 0;
+        padding: 26px;
+        text-align: left;
+        background: rgba(18, 23, 31, 0.92);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+    }
+    
+    .form-group {
+        display: grid;
+        gap: 8px;
+        margin-bottom: 19px;
+    }
+    
+    .form-group label {
+        color: var(--muted-light);
+        font-size: 13px;
+        font-weight: 700;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        min-height: 48px;
+        padding: 13px 14px;
+        color: var(--text);
+        background: #0a0d12;
+        border: 1px solid var(--border-strong);
+        border-radius: 9px;
+        font: inherit;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .form-group textarea {
+        min-height: 130px;
+        resize: vertical;
+    }
+    
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: #687383;
+    }
+    
+    .form-group select:invalid {
+        color: #929cab;
+    }
+    
+    .form-group select option {
+        color: #f4f7fb;
+        background: #0a0d12;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border-color: var(--green);
+        box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.1);
+    }
+    
+    .contact-submit {
+        width: 100%;
+        border: 0;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 750;
+    }
+    
+    .contact-submit:disabled {
+        cursor: wait;
+        opacity: 0.7;
+    }
+    
+    .cta .form-note {
+    margin: 13px 0 0;
+    max-width: none;
+    color: #727d8b;
+    font-size: 11px;
+    text-align: center;
+    }
+    
+    .form-feedback {
+        margin-top: 18px;
+        padding: 16px;
+        border-radius: 10px;
+        font-size: 13px;
+        line-height: 1.7;
+    }
+    
+    .form-feedback.success {
+        color: #c9f8e5;
+        background: rgba(52, 211, 153, 0.08);
+        border: 1px solid rgba(52, 211, 153, 0.28);
+    }
+    
+    .form-feedback.error {
+        color: #ffd5d5;
+        background: rgba(255, 90, 90, 0.07);
+        border: 1px solid rgba(255, 90, 90, 0.25);
+    }
+    
+    .form-honeypot {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
+    
+    @media (max-width: 420px) {
+        .contact-form {
+            padding: 19px;
+        }
+    }
+  
     @media (max-width: 900px) {
         .proof-grid { grid-template-columns: repeat(2, 1fr); }
         .cert-grid {  grid-template-columns: 1fr; }
@@ -1337,10 +1460,82 @@
                 <div class="section-label">Let's Work Together</div>
                 <h2>Need paid acquisition that scales?</h2>
                 <p>If you need a performance marketer who can manage acquisition around CPA, lead quality, call performance, and measurable business outcomes, let's talk.</p>
+
+                
                 <div class="buttons">
-                    <a class="btn btn-primary" href="https://www.linkedin.com/in/muhammad-ibrahim-bin-zahid-115590231" target="_blank" rel="noopener noreferrer">Connect on LinkedIn →</a>
-                    <a class="btn btn-secondary" href="mailto:ibrahim@ibrahimzahid.com">Email Me</a>
+                    <a class="btn btn-primary"
+                       href="https://www.linkedin.com/in/muhammad-ibrahim-bin-zahid-115590231"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Connect on LinkedIn →
+                    </a>
+                
+                    <a class="btn btn-secondary" href="#contactForm">
+                        Send an Inquiry ↓
+                    </a>
                 </div>
+                
+                <form action="https://formspree.io/f/mqpeydzq"
+                      method="POST"
+                      class="contact-form"
+                      id="contactForm">
+                
+                    <input type="hidden" name="_subject"
+                           value="New Portfolio Inquiry — Ibrahim Zahid">
+
+                    <div class="form-honeypot" aria-hidden="true">
+                      <label>Leave this field empty
+                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                      </label>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="contactName">Full Name</label>
+                        <input type="text" id="contactName" name="name"
+                               placeholder="Your full name"
+                               autocomplete="name" required maxlength="100">
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="contactEmail">Work Email</label>
+                        <input type="email" id="contactEmail" name="email"
+                               placeholder="you@company.com"
+                               autocomplete="email" required maxlength="254">
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="contactSubject">Inquiry Type</label>
+                        <select id="contactSubject" name="inquiry_type" required>
+                            <option value="" disabled selected>Select an inquiry type</option>
+                            <option value="Full-time opportunity">Full-time opportunity</option>
+                            <option value="Freelance or contract work">Freelance / Contract Work</option>
+                            <option value="Paid acquisition project">Paid Acquisition Project</option>
+                            <option value="Agency partnership">Agency Partnership</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="contactMessage">Project Details</label>
+                        <textarea id="contactMessage" name="message" rows="5"
+                                  placeholder="Tell me about your goals, campaign, or hiring needs..."
+                                  required minlength="10" maxlength="5000"></textarea>
+                    </div>
+                
+                    <button class="btn btn-primary contact-submit"
+                            type="submit" id="contactSubmit">
+                        Send Inquiry →
+                    </button>
+                
+                    <p class="form-note">
+                        Your details will only be used to respond to your inquiry.
+                    </p>
+                
+                    <div class="form-feedback" id="formFeedback"
+                         role="status" aria-live="polite" tabindex="-1" hidden></div>
+                </form>
+
+              
             </div>
         </div>
     </section>
@@ -1385,6 +1580,68 @@
     } else {
         previewEls.forEach(el => el.classList.add('in-view'));
     }
+
+    /* CONTACT FORM — FORMSPREE AJAX SUBMISSION */
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        const submitButton = document.getElementById('contactSubmit');
+        const feedback = document.getElementById('formFeedback');
+    
+        contactForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+    
+            if (!contactForm.reportValidity()) return;
+    
+            const originalButtonHTML = submitButton.innerHTML;
+    
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending your inquiry...';
+            feedback.hidden = true;
+            feedback.className = 'form-feedback';
+            feedback.textContent = '';
+    
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+    
+                if (!response.ok) {
+                    throw new Error('Form submission failed');
+                }
+    
+                contactForm.reset();
+    
+                feedback.className = 'form-feedback success';
+                feedback.innerHTML =
+                    '<strong>Thank you for reaching out!</strong><br>' +
+                    'Your inquiry has been submitted successfully. ' +
+                    'I appreciate your interest and will review your message ' +
+                    'and get back to you as soon as possible.';
+    
+                feedback.hidden = false;
+                feedback.focus();
+    
+            } catch (error) {
+                feedback.className = 'form-feedback error';
+                feedback.textContent =
+                    'We couldn’t submit your inquiry right now. ' +
+                    'Please check your internet connection and try again.';
+    
+                feedback.hidden = false;
+                feedback.focus();
+    
+            } finally {
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonHTML;
+            }
+        });
+    }
+    
 </script>
 
 </body>
