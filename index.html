@@ -831,6 +831,10 @@
             background: var(--blue);
         }
 
+        .case-card.saas::after {
+            background: #a855f7;
+        }
+
         .case-top {
             display: flex;
             align-items: center;
@@ -1087,7 +1091,7 @@
 
         .cert-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 16px;
         }
 
@@ -1735,14 +1739,6 @@
         @media (max-width: 900px) {
             .proof-grid {
                 grid-template-columns: repeat(2, 1fr);
-            }
-
-            .cert-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .case-grid {
-                grid-template-columns: 1fr;
             }
 
             .systems-grid {
@@ -2521,32 +2517,109 @@
 
                         <div class="case-results">
                             <div class="result">
-                                <div class="result-number">$800K+</div>
-                                <div class="result-label">Estimated cumulative spend</div>
+                                <div class="result-number">1.32×</div>
+                                <div class="result-label">Proven ROAS (Performance side)</div>
                             </div>
                             <div class="result">
-                                <div class="result-number">$489.5K</div>
+                                <div class="result-number">$781.5K</div>
                                 <div class="result-label">Documented spend</div>
                             </div>
                             <div class="result">
-                                <div class="result-number">20×</div>
+                                <div class="result-number">25×</div>
                                 <div class="result-label">Daily spend scale</div>
                             </div>
                             <div class="result">
-                                <div class="result-number">$300 → $6K+</div>
-                                <div class="result-label">Daily campaign spend</div>
+                                <div class="result-number">$600 → $15K+</div>
+                                <div class="result-label">Daily spend range</div>
                             </div>
                         </div>
 
                         <div class="case-caveat">
-                            Cumulative spend is approximate; documented spend reflects available account-level
-                            snapshots.
+                            Documented spend reflects available account-level historical snapshots.
                         </div>
 
                         <a class="btn btn-primary"
                             href="case-studies/Insurance_Google_Search_Media_Buying_Case_Study.pptx" target="_blank"
                             rel="noopener noreferrer">
                             View Insurance Case Study →
+                        </a>
+                    </article>
+
+                    <!-- CASE STUDY 05 — B2B SAAS (SPYINGAGENT) -->
+                    <article class="case-card saas">
+                        <div class="case-top">
+                            <div class="case-index">CASE STUDY 05</div>
+                            <div class="case-status">B2B SaaS · Co-Founder & Growth</div>
+                        </div>
+
+                        <h3>B2B SaaS Paid Acquisition & Funnel Experiment</h3>
+
+                        <p>
+                            Owned paid acquisition and GTM strategy end-to-end for SpyingAgent, an AI ad-intelligence
+                            tool. Built landing pages, Google Search campaigns, GA4 conversion tracking, and ran pricing
+                            & onboarding A/B tests.
+                        </p>
+
+                        <div class="case-tags">
+                            <span class="tag">Google Search</span>
+                            <span class="tag">B2B SaaS</span>
+                            <span class="tag">GTM Strategy</span>
+                            <span class="tag">Conversion Rate</span>
+                            <span class="tag">GA4 Analytics</span>
+                            <span class="tag">Funnel Testing</span>
+                        </div>
+
+                        <div class="case-results">
+                            <div class="result">
+                                <div class="result-number">8.9%</div>
+                                <div class="result-label">High-Intent Conv. Rate</div>
+                            </div>
+                            <div class="result">
+                                <div class="result-number">$33.55</div>
+                                <div class="result-label">Cost / Trial Sign-up</div>
+                            </div>
+                            <div class="result">
+                                <div class="result-number">73</div>
+                                <div class="result-label">Trial Sign-ups Generated</div>
+                            </div>
+                            <div class="result">
+                                <div class="result-number">6.4%</div>
+                                <div class="result-label">Blended Conv. Rate</div>
+                            </div>
+                        </div>
+
+                        <div class="case-caveat">
+                            Self-funded founder experiment (Sep 2024–Mar 2025). High-intent search drove 52% of sign-ups
+                            at $33.55 cost/conv.
+                        </div>
+
+                        <div class="doc-preview">
+                            <div class="doc-preview-label"><span class="icon-dot"></span> Inside the report — Campaign
+                                Conv. Rate Breakdown</div>
+                            <div class="preview-bars">
+                                <div class="preview-bar-row">
+                                    <div class="preview-bar-tag">High-Intent</div>
+                                    <div class="preview-bar-track">
+                                        <div class="preview-bar-fill after" style="--w:100%"></div>
+                                    </div>
+                                    <div class="preview-bar-value">8.9%</div>
+                                </div>
+                                <div class="preview-bar-row">
+                                    <div class="preview-bar-tag">Problem-Led</div>
+                                    <div class="preview-bar-track">
+                                        <div class="preview-bar-fill before" style="--w:52%"></div>
+                                    </div>
+                                    <div class="preview-bar-value">4.7%</div>
+                                </div>
+                            </div>
+                            <div class="doc-preview-caption">High-intent search beat problem-focused traffic by 89% in
+                                conversion efficiency ($33.55 vs $45.37 CPA).</div>
+                        </div>
+
+                        <a class="btn btn-primary"
+                            href="case-studies/Campaign_Performance_Evidence_SpyingAgent_Google_Ads.docx"
+                            target="_blank" rel="noopener noreferrer">
+                            View SaaS Case Study →
                         </a>
                     </article>
 
@@ -2663,6 +2736,39 @@
 
                 <div class="timeline">
 
+                    <!-- 2025 — PRESENT: INSURANCE SEARCH / FINAL EXPENSE -->
+                    <div class="timeline-item">
+                        <div class="timeline-dates">2025 — Present</div>
+                        <div class="timeline-role">Performance Marketer — Insurance Search Acquisition</div>
+                        <div class="timeline-context">Stealth · Google Search Ads, Ringba, CallGrid · U.S. Market</div>
+
+                        <ul>
+                            <li>Owned end-to-end Google Search acquisition for Final Expense and Insurance lead
+                                generation, scaling daily spend from $600/day to $15,000+/day.</li>
+                            <li>Managed multi-account search operations across 10+ Google Ads accounts to mitigate
+                                account-level risk and bypass single-account spend ceilings.</li>
+                            <li>Achieved a proven 1.32× ROAS across $781.5K+ in documented spend using data-driven bid
+                                management (Maximize Conversions → Target CPA) and hourly performance monitoring.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 2024 — 2025: B2B SAAS (SPYINGAGENT) -->
+                    <div class="timeline-item">
+                        <div class="timeline-dates">2024 — 2025</div>
+                        <div class="timeline-role">Co-Founder, Growth &amp; Marketing — B2B SaaS (SpyingAgent)</div>
+                        <div class="timeline-context">Self-Funded Venture · Google Search Ads, GA4, GTM · Global</div>
+
+                        <ul>
+                            <li>Built and executed GTM acquisition strategy for an AI ad-intelligence platform,
+                                generating 73 trial sign-ups at a 6.4% blended conversion rate.</li>
+                            <li>Optimized Google Search structures: high-intent keywords achieved an 8.9% conversion
+                                rate at $33.55 per trial signup.</li>
+                            <li>Analyzed full-funnel GA4 drop-offs and ran product pricing/onboarding experiments to
+                                evaluate trial-to-paid activation mechanics.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 2024 — 2025: DEBT RELIEF -->
                     <div class="timeline-item">
                         <div class="timeline-dates">2024 — 2025</div>
                         <div class="timeline-role">Performance Marketer — Debt Relief Lead Generation</div>
@@ -2678,6 +2784,7 @@
                         </ul>
                     </div>
 
+                    <!-- 2023: ACA / HEALTH INSURANCE -->
                     <div class="timeline-item">
                         <div class="timeline-dates">2023</div>
                         <div class="timeline-role">Performance Marketer — ACA / Health Insurance Lead Generation</div>
@@ -2694,6 +2801,7 @@
                     </div>
 
                 </div>
+
             </div>
         </section>
 
@@ -2708,58 +2816,106 @@
                     and social strategy coursework.
                 </p>
 
-                <div class="cert-grid">
+                <!-- CERTIFICATIONS -->
+                <section id="certifications">
+                    <div class="container">
+                        <div class="section-label">Certifications</div>
+                        <h2 class="section-title">Certified in modern digital marketing &amp; analytics.</h2>
+                        <p class="section-description">
+                            Direct platform certifications backing the paid acquisition, conversion tracking,
+                            and growth frameworks detailed above.
+                        </p>
 
-                    <a class="cert-card"
-                        href="https://skillshop.credential.net/eca9d7d6-d442-47a1-b385-4beb5d06cb25#acc.d5ARSWJm"
-                        target="_blank" rel="noopener noreferrer"
-                        aria-label="Verify Google Ads Search Certification credential">
-                        <div class="cert-badge google">G</div>
-                        <div class="cert-content">
-                            <div class="cert-name">Google Ads Search Certification</div>
-                            <div class="cert-issuer">Google Skillshop</div>
-                            <div class="cert-note">
-                                Search campaign structure, keyword strategy, bidding
-                                and measurement — direct platform certification for
-                                the account work above
-                            </div>
+                        <div class="cert-grid">
+
+                            <!-- 1. GOOGLE SEARCH -->
+                            <a class="cert-card"
+                                href="https://skillshop.credential.net/eca9d7d6-d442-47a1-b385-4beb5d06cb25#acc.d5ARSWJm"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Verify Google Ads Search Certification credential">
+                                <div class="cert-badge google">G</div>
+                                <div class="cert-content">
+                                    <div class="cert-name">Google Ads Search Certification</div>
+                                    <div class="cert-issuer">Google Skillshop · 2026</div>
+                                    <div class="cert-note">
+                                        Search campaign structure, keyword strategy, bidding
+                                        and measurement — direct platform certification
+                                    </div>
+                                </div>
+                                <div class="cert-link">Verify credential →</div>
+                            </a>
+
+                            <!-- 2. GOOGLE ANALYTICS -->
+                            <a class="cert-card"
+                                href="https://skillshop.credential.net/66f5e9b8-6171-4cfa-a6f8-9151ed275620"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Verify Google Analytics Certification credential">
+                                <div class="cert-badge google">G</div>
+                                <div class="cert-content">
+                                    <div class="cert-name">Google Analytics Certification</div>
+                                    <div class="cert-issuer">Google Skillshop · 2026</div>
+                                    <div class="cert-note">
+                                        GA4 full-funnel measurement, conversion event tracking,
+                                        attribution modeling and user behavior analytics
+                                    </div>
+                                </div>
+                                <div class="cert-link">Verify credential →</div>
+                            </a>
+
+                            <!-- 3. GOOGLE AI-POWERED PERFORMANCE ADS -->
+                            <a class="cert-card"
+                                href="https://skillshop.credential.net/132f479c-688d-4d8c-afc6-5f76241595c1#acc.JOZvAYSP"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Verify AI-Powered Performance Ads Certification credential">
+                                <div class="cert-badge google">G</div>
+                                <div class="cert-content">
+                                    <div class="cert-name">AI-Powered Performance Ads</div>
+                                    <div class="cert-issuer">Google Skillshop · 2026</div>
+                                    <div class="cert-note">
+                                        Leveraging Google AI for Smart Bidding, broad match, creative automation,
+                                        and scaling campaign performance
+                                    </div>
+                                </div>
+                                <div class="cert-link">Verify credential →</div>
+                            </a>
+
+                            <!-- 4. HUBSPOT DIGITAL MARKETING -->
+                            <a class="cert-card"
+                                href="https://app-na2.hubspot.com/academy/achievements/qf7d4p6j/en/1/ibrahim-zahid/digital-marketing-certified"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Verify Digital Marketing Certified credential from HubSpot">
+                                <div class="cert-badge">H</div>
+                                <div class="cert-content">
+                                    <div class="cert-name">Digital Marketing Certified</div>
+                                    <div class="cert-issuer">HubSpot Academy</div>
+                                    <div class="cert-note">
+                                        Digital marketing, SEO, social media, video, advertising
+                                        &amp; performance measurement
+                                    </div>
+                                </div>
+                                <div class="cert-link">Verify credential →</div>
+                            </a>
+
+                            <!-- 5. HUBSPOT SOCIAL MEDIA -->
+                            <a class="cert-card"
+                                href="https://app-na2.hubspot.com/academy/achievements/yyh7q6tk/en/1/ibrahim-zahid/social-media-certified"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Verify Social Media Certified credential from HubSpot">
+                                <div class="cert-badge">H</div>
+                                <div class="cert-content">
+                                    <div class="cert-name">Social Media Certified</div>
+                                    <div class="cert-issuer">HubSpot Academy</div>
+                                    <div class="cert-note">
+                                        Social strategy, monitoring, engagement, content,
+                                        social ROI &amp; inbound methodology
+                                    </div>
+                                </div>
+                                <div class="cert-link">Verify credential →</div>
+                            </a>
+
                         </div>
-                        <div class="cert-link">Verify credential →</div>
-                    </a>
-
-                    <a class="cert-card"
-                        href="https://app-na2.hubspot.com/academy/achievements/qf7d4p6j/en/1/ibrahim-zahid/digital-marketing-certified"
-                        target="_blank" rel="noopener noreferrer"
-                        aria-label="Verify Digital Marketing Certified credential from HubSpot">
-                        <div class="cert-badge">H</div>
-                        <div class="cert-content">
-                            <div class="cert-name">Digital Marketing Certified</div>
-                            <div class="cert-issuer">HubSpot Academy</div>
-                            <div class="cert-note">
-                                Digital marketing, SEO, social media, video, advertising
-                                & performance measurement
-                            </div>
-                        </div>
-                        <div class="cert-link">Verify credential →</div>
-                    </a>
-
-                    <a class="cert-card"
-                        href="https://app-na2.hubspot.com/academy/achievements/yyh7q6tk/en/1/ibrahim-zahid/social-media-certified"
-                        target="_blank" rel="noopener noreferrer"
-                        aria-label="Verify Social Media Certified credential from HubSpot">
-                        <div class="cert-badge">H</div>
-                        <div class="cert-content">
-                            <div class="cert-name">Social Media Certified</div>
-                            <div class="cert-issuer">HubSpot Academy</div>
-                            <div class="cert-note">
-                                Social strategy, monitoring, engagement, content,
-                                social ROI & inbound methodology
-                            </div>
-                        </div>
-                        <div class="cert-link">Verify credential →</div>
-                    </a>
-
-                </div>
+                    </div>
+                </section>
             </div>
         </section>
 
